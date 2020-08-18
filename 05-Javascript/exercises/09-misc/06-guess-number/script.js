@@ -10,5 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let nombreADeviner=Math.floor(Math.random() * 100) + 1;
+    devine();
+    function devine(){
+    userGuess=prompt("Trouves le chiffre entre 1 et 100 ?");
+    if (userGuess<nombreADeviner) {
+        alert("C'est plus grand, essayes encore !");
+        devine();
+    } else if (userGuess>nombreADeviner) {
+        alert("C'est plus petit, essayes encore !");
+        devine();
+    }
+    else {alert("Bravo !!!");}} // your code here
 })();

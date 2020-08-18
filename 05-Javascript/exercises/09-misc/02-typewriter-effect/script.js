@@ -11,4 +11,20 @@
 
 (() => {
     // your code here
-})();
+    let message = document.getElementById("target").innerHTML;
+    document.getElementById("target").innerHTML = "";
+    let maxDelay = 500;
+    let i = 0;
+  
+    function typeWriter() {
+      let delay = Math.floor(Math.random() * maxDelay + 1);
+      if (i < message.length) {
+        document.getElementById("target").innerHTML += message.charAt(i);
+        i++;
+        setTimeout(typeWriter, delay);
+      }
+    }
+    typeWriter();
+  })();
+
+

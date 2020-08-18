@@ -10,5 +10,15 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        
+        function a(error,array){
+            if (error != null){console.error(error);}else{
+            
+            console.log(array);}
+            
+        }
+        
+        window.lib.getPersons(a);
+    });      // your code here
 })();

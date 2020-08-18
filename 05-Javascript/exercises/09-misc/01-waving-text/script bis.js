@@ -11,26 +11,23 @@
 
 (() => {
     let vague = document.getElementById("target").innerHTML
-    let lieu = document.getElementById("target")
-    let arr = ["10px","20px","30px","40px","50px","60px","50px","40px","30px","20px"]
+    let arr = ["5","10","20","10"]
     
-    for (x = 0; arr.length <vague.length; x++) {
+    for (x = 0; x <vague.length; x++) {
       arr.push(arr[x]);
-      
     }
     
+
     for (i=0,c=0;i<vague.length,c<arr.length;i++,c++){
         
-        
-        let id = document.createElement('id');
-        lieu.appendChild(id);
-        id.setAttribute('id', i);
         let vague2 = vague.charAt(i);
-        id.innerHTML = vague2;
-        id.style.fontSize = arr[c]
+        let result = vague2.fontsize(arr[c]);
+        
+        console.log(result)
+        document.getElementById("target").innerHTML 
     }
-    lieu.removeChild(lieu.firstChild)
-
+  
+  
 // your code here
 })();
 

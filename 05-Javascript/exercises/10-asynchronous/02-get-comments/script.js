@@ -10,5 +10,21 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        
+
+        function next(error,array){
+            function next2(error,array3){
+                for (i=0;i<array.length;i++){
+                array[i].comments = array3;}
+                console.log(array)
+                
+            }
+            window.lib.getComments("id",next2);
+        }
+
+        window.lib.getPosts(next);
+
+    });      // your code here
 })();
+

@@ -10,5 +10,20 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    
+    document.getElementById("target").innerHTML = localStorage.getItem("click");
+    let clicks =localStorage.getItem("click");
+    let nbrClick = document.getElementById("target");
+    document.getElementById("increment").addEventListener("click", () => { 
+    
+    
+    click()
+    function click() {
+        clicks ++;}
+    nbrClick.innerHTML = clicks;
+    localStorage.setItem("click", clicks)// your code here
+    });
+    
+    ;
 })();
